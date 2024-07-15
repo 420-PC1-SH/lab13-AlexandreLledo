@@ -49,4 +49,11 @@ describe("transmission processor", function () {
             processor("9701::489584872710");
         }).toThrow(expectedError);
     });
+
+    test("throws error if id can't be a number", function () {
+        const expectedError = new Error('Data is invalid ; id should be a number');
+        expect(() => {
+            processor("alo::<489584872710>");
+        }).toThrow(expectedError);
+    })
 });
