@@ -60,7 +60,7 @@ describe("transmission processor", function () {
     test("throws error if rawData have character", function () {
         const expectedError = new Error('Data is invalid ; rawData should be a number');
         expect(() => {
-            processor("9701::<489584872710>");
+            processor("9701::<48958d4872710>");
         }).toThrow(expectedError);
     })
 });
