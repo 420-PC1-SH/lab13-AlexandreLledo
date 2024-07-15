@@ -26,6 +26,12 @@ describe("greeting test", function () {
             expect(hello).toEqual("Hello there");
         })
 
+    });
+
+    test('name all in upperCase', function () {
+        let name = "ALEX";
+        let hello = greet(name);
+        expect(hello).toEqual("HELLO ALEX");
     })
 
 })
