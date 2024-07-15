@@ -9,6 +9,11 @@ function greet(name) {
         return "Hello there";
     }
 
+    let nameUpperCase = name.toUpperCase();
+    if (name === nameUpperCase) {
+        return "HELLO " + name;
+    }
+
 
     return "Hello," + name;
 }
