@@ -11,12 +11,19 @@ describe("greeting test", function () {
 
         test("name is empty", function () {
             let hello = greet("");
-            expect(hello).toEqual("hello there");
+            expect(hello).toEqual("Hello there");
         });
 
         test("name is null", function () {
-            let hello = greet();
-            expect(hello).toEqual("hello there");
+            let name = null;
+            let hello = greet(name);
+            expect(hello).toEqual("Hello there");
+        });
+
+        test("name is undefined", function () {
+            let name;
+            let hello = greet(name);
+            expect(hello).toEqual("Hello there");
         })
 
     })

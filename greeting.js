@@ -1,10 +1,14 @@
 function greet(name) {
     if (name == "") {
-        return "hello there";
+        return "Hello there";
+    }
+    if (name == undefined) {
+        return "Hello there";
     }
     if (name == null) {
-        return "hello there";
+        return "Hello there";
     }
+
 
     return "Hello," + name;
 }
