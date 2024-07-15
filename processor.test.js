@@ -9,7 +9,9 @@ describe("transmission processor", function () {
 
     test("throws error if '::' not found", function () {
         const expectedError = new Error('Data is invalid ; should contain "::"');
-        expect(() => { processor("9701<489584872710>"); }).toThrow(expectedError);
+        expect(() => {
+            processor("9701<489584872710>");
+        }).toThrow(expectedError);
     });
 
     test("returns id in object", function () {
@@ -27,18 +29,24 @@ describe("transmission processor", function () {
         expect(result.rawData).not.toEqual(undefined);
     });
 
-    test("throws error if '<' not found", function () {
+    test("throws error if '<' not found as first characters", function () {
         const expectedError = new Error('Data is invalid ; should contain "<"');
-        expect(() => { processor("9701::489584872710>"); }).toThrow(expectedError);
+        expect(() => {
+            processor("9701::489584872710>");
+        }).toThrow(expectedError);
     });
 
-    test("throws error if '>' not found", function () {
+    test("throws error if '>' not found as last characters", function () {
         const expectedError = new Error('Data is invalid ; should contain ">"');
-        expect(() => { processor("9701::<489584872710"); }).toThrow(expectedError);
+        expect(() => {
+            processor("9701::<489584872710");
+        }).toThrow(expectedError);
     });
 
     test("throws error if '<' and '>' not found", function () {
         const expectedError = new Error('Data is invalid ; should contain "<" and ">"');
-        expect(() => { processor("9701::489584872710"); }).toThrow(expectedError);
+        expect(() => {
+            processor("9701::489584872710");
+        }).toThrow(expectedError);
     });
 });
