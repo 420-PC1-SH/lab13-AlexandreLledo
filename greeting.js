@@ -1,4 +1,5 @@
 function greet(name) {
+    let isArray = false;
     if (name == "") {
         return "Hello there";
     }
@@ -8,9 +9,11 @@ function greet(name) {
     if (name == null) {
         return "Hello there";
     }
-
-    if (name === name.toUpperCase()) {
+    if (typeof name === 'string' && name === name.toUpperCase()) {
         return "HELLO " + name;
+    }
+    if (Array.isArray(name)) {
+        return "Hello, " + name[0] + " and " + name[1];
     }
 
 
