@@ -1,5 +1,5 @@
-function greeting(name) {
+function greet(name) {
     return "Hello," + name;
 }
 
-module.exports = greeting;
+module.exports = greet;
