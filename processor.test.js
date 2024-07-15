@@ -55,5 +55,12 @@ describe("transmission processor", function () {
         expect(() => {
             processor("alo::<489584872710>");
         }).toThrow(expectedError);
+    });
+
+    test("throws error if rawData have character", function () {
+        const expectedError = new Error('Data is invalid ; rawData should be a number');
+        expect(() => {
+            processor("9701::<489584872710>");
+        }).toThrow(expectedError);
     })
 });

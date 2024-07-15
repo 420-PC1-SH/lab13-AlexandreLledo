@@ -6,6 +6,7 @@ function processor(transmission) {
     let id = Number(parts[0]);
     let rawData = parts[1];
 
+
     if (isNaN(id)) {
         throw new Error('Data is invalid ; id should be a number');
     }
