@@ -1,5 +1,4 @@
-const greeting = require('greeting');
-const test = require("node:test");
+const greeting = require('./greeting');
 
 describe("greeting test", function () {
 
