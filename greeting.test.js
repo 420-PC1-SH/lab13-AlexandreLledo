@@ -40,4 +40,9 @@ describe("greeting test", function () {
         expect(hello).toEqual("Hello, Alex and Dereck");
     })
 
+    test('name is an array of more than 2 elements', function () {
+        let names = ["Alex", "Dereck", "Maika"];
+        let hello = greet(names);
+        expect(hello).toEqual("Hello, Alex, Dereck and Maika");
+    })
 })
